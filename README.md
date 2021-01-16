@@ -13,8 +13,8 @@ When we analyse from the perspective of OOP concepts, the use of getters and set
 The problem can be solved by including the distance and direction methods in point class. The names can be renammed to distanceBetween and directionOf so that the intention is clear (distance between points and direction of the points). The properties and methods are wrapped up in a class thereby preserving encapsulation. Usage of getters can also be avoided which will preserve the abstraction.
 
 <ins>Analysing both solution using the four principles of Kent Beck</ins>
-1. Both solutions passes the test.
-2. Both solutions reveals intention.
+1. Both solutions pass the test.
+2. Both solutions reveal intention.
 3. There is no duplication in both solutions.
 4. Solution proposed in this project have fewer elements.
 
