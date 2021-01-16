@@ -3,14 +3,13 @@ package org.oop;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static org.oop.DistanceAndDirectionCalculator.direction;
+import static org.oop.Point.*;
 
-public class DistanceAndDirectionCalculatorTest {
-
+public class PointTest {
     @Test
     void twoPointsWithSameXAndYCoordinatesShouldHaveADistanceOfZero() {
         Point origin = new Point(0, 0);
-        Assertions.assertEquals(0, DistanceAndDirectionCalculator.distance(origin, origin));
+        Assertions.assertEquals(0, distance(origin, origin));
     }
 
     @Test
@@ -19,8 +18,8 @@ public class DistanceAndDirectionCalculatorTest {
         Point point1 = new Point(1, 0);
         Point point2 = new Point(0, 1);
 
-        Assertions.assertEquals(1, DistanceAndDirectionCalculator.distance(origin, point1));
-        Assertions.assertEquals(1, DistanceAndDirectionCalculator.distance(origin, point2));
+        Assertions.assertEquals(1, distance(origin, point1));
+        Assertions.assertEquals(1, distance(origin, point2));
     }
 
     @Test
@@ -28,14 +27,14 @@ public class DistanceAndDirectionCalculatorTest {
         Point point1 = new Point(1, 0);
         Point point2 = new Point(-1, 0);
 
-        Assertions.assertEquals(2, DistanceAndDirectionCalculator.distance(point1, point2));
+        Assertions.assertEquals(2, distance(point1, point2));
     }
 
     @Test
     void originAndPointOnPostiveXAxisShouldBeZeroRadiansAway() {
-        Point origin = new Point(0, 0);
         Point point1 = new Point(1, 0);
         Point point2 = new Point(3, 0);
+        Point origin = new Point(0, 0);
 
         Assertions.assertEquals(0, direction(origin, point1));
         Assertions.assertEquals(0, direction(origin, point2));
