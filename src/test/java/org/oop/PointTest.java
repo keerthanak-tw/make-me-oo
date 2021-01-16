@@ -9,7 +9,7 @@ public class PointTest {
     @Test
     void twoPointsWithSameXAndYCoordinatesShouldHaveADistanceOfZero() {
         Point origin = new Point(0, 0);
-        Assertions.assertEquals(0, distance(origin, origin));
+        Assertions.assertEquals(0, distanceBetween(origin, origin));
     }
 
     @Test
@@ -18,8 +18,8 @@ public class PointTest {
         Point point1 = new Point(1, 0);
         Point point2 = new Point(0, 1);
 
-        Assertions.assertEquals(1, distance(origin, point1));
-        Assertions.assertEquals(1, distance(origin, point2));
+        Assertions.assertEquals(1, distanceBetween(origin, point1));
+        Assertions.assertEquals(1, distanceBetween(origin, point2));
     }
 
     @Test
@@ -27,7 +27,7 @@ public class PointTest {
         Point point1 = new Point(1, 0);
         Point point2 = new Point(-1, 0);
 
-        Assertions.assertEquals(2, distance(point1, point2));
+        Assertions.assertEquals(2, distanceBetween(point1, point2));
     }
 
     @Test
@@ -36,8 +36,8 @@ public class PointTest {
         Point point2 = new Point(3, 0);
         Point origin = new Point(0, 0);
 
-        Assertions.assertEquals(0, direction(origin, point1));
-        Assertions.assertEquals(0, direction(origin, point2));
+        Assertions.assertEquals(0, directionOf(origin, point1));
+        Assertions.assertEquals(0, directionOf(origin, point2));
     }
 
     @Test
@@ -46,8 +46,8 @@ public class PointTest {
         Point point1 = new Point(-1, 0);
         Point point2 = new Point(-3, 0);
 
-        Assertions.assertEquals(Math.PI, direction(origin, point1));
-        Assertions.assertEquals(Math.PI, direction(origin, point2));
+        Assertions.assertEquals(Math.PI, directionOf(origin, point1));
+        Assertions.assertEquals(Math.PI, directionOf(origin, point2));
     }
 
     @Test
@@ -56,7 +56,7 @@ public class PointTest {
         Point point1 = new Point(0, 1);
         Point point2 = new Point(0, 3);
 
-        Assertions.assertEquals(Math.PI / 2, direction(origin, point2));
-        Assertions.assertEquals(Math.PI / 2, direction(origin, point1));
+        Assertions.assertEquals(Math.PI / 2, directionOf(origin, point2));
+        Assertions.assertEquals(Math.PI / 2, directionOf(origin, point1));
     }
 }
