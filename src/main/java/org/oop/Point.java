@@ -13,15 +13,15 @@ public class Point {
         return coordinate1 - coordinate2;
     }
 
-    public static double distanceBetween(Point from, Point to) {
-        double xDistance = getDifference(to.x, from.x);
-        double yDistance = getDifference(to.y, from.y);
+    public double distanceBetween(Point to) {
+        double xDistance = getDifference(to.x, this.x);
+        double yDistance = getDifference(to.y, this.y);
         return Math.sqrt(Math.pow(xDistance, 2) + Math.pow(yDistance, 2));
     }
 
-    public static double directionOf(Point from, Point to) {
-        double xDistance = getDifference(to.x, from.x);
-        double yDistance = getDifference(to.y, from.y);
+    public double directionOf(Point to) {
+        double xDistance = getDifference(to.x, this.x);
+        double yDistance = getDifference(to.y, this.y);
         return Math.atan2(yDistance, xDistance);
     }
 }
